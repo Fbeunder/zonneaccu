@@ -6,3 +6,7 @@ van verschillende energieopslagmethoden zoals:
 - Accu's/Batterijen
 - Andere opslagmethoden die in de toekomst kunnen worden toegevoegd
 """
+
+from storage_modules import boiler_module
+
+__all__ = ['boiler_module']
