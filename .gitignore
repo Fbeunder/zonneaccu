@@ -1,4 +1,4 @@
-# Python specifieke bestanden
+# Python bestanden
 __pycache__/
 *.py[cod]
 *$py.class
@@ -16,13 +16,13 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 
-# Virtuele omgeving
+# Virtuele omgevingen
 venv/
-env/
 ENV/
 
 # IDE bestanden
@@ -31,21 +31,25 @@ ENV/
 *.swp
 *.swo
 
-# Jupyter Notebook bestanden
-.ipynb_checkpoints
-
-# Data bestanden
-*.csv
-*.xls
-*.xlsx
-
-# Log bestanden
-*.log
-
-# Streamlit specifieke bestanden
+# Streamlit specifiek
 .streamlit/secrets.toml
 
-# Project context bestanden negeren
-claude.txt
-claude_steps.txt
-develop_context.txt
+# Logs
+logs
+*.log
+
+# Databestanden
+*.sqlite
+*.db
+
+# Configuratiebestanden met gevoelige informatie
+.env
+.env.local
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.ipynb
+
+# OS specifieke bestanden
+.DS_Store
+Thumbs.db
