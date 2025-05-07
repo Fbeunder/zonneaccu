@@ -21,7 +21,7 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
   - Functionaliteit: CSV-import, datavalidatie, resampling, afgeleide waarden berekenen, basisstatistieken genereren
 
 - **data_analysis.py**: Analyse van de geladen data (patronen, statistieken, visualisaties) 
-  - Status: Geïmplementeerd (PR #6)
+  - Status: Geïmplementeerd
   - Afhankelijkheid: data_loader.py
   - Functionaliteit: Patroonherkenning, statistische analyse, visualisaties, opslagsimulatie, outlier detectie
 
@@ -41,7 +41,7 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
   - Functionaliteit: Bestandsupload, voorbeelddata, datavalidatie, preprocessing opties, statistieken weergave
 
 - **data_analysis_page.py**: UI-component voor het analyseren en visualiseren van energiedata
-  - Status: Geïmplementeerd (PR #6)
+  - Status: Geïmplementeerd
   - Afhankelijkheid: data_loader.py, data_analysis.py
   - Functionaliteit: Tijdreeksvisualisatie, patroonanalyse, energiebalans, opslagpotentieel, outlier analyse
 
