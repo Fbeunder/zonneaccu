@@ -7,6 +7,6 @@ van verschillende energieopslagmethoden zoals:
 - Andere opslagmethoden die in de toekomst kunnen worden toegevoegd
 """
 
-from storage_modules import boiler_module
+from storage_modules import boiler_module, battery_module
 
-__all__ = ['boiler_module']
+__all__ = ['boiler_module', 'battery_module']
