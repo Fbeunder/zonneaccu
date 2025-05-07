@@ -20,9 +20,10 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
   - Afhankelijkheid: Geen
   - Functionaliteit: CSV-import, datavalidatie, resampling, afgeleide waarden berekenen, basisstatistieken genereren
 
-- **data_analysis.py**: Analyse van de geladen data (patronen, statistics, etc.) 
-  - Status: Nog te implementeren
+- **data_analysis.py**: Analyse van de geladen data (patronen, statistieken, visualisaties) 
+  - Status: Geïmplementeerd (PR #6)
   - Afhankelijkheid: data_loader.py
+  - Functionaliteit: Patroonherkenning, statistische analyse, visualisaties, opslagsimulatie, outlier detectie
 
 ### Storage Modules
 - **boiler_module.py**: Berekeningen voor warmwaterboiler opslag
@@ -39,6 +40,11 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
   - Afhankelijkheid: data_loader.py
   - Functionaliteit: Bestandsupload, voorbeelddata, datavalidatie, preprocessing opties, statistieken weergave
 
+- **data_analysis_page.py**: UI-component voor het analyseren en visualiseren van energiedata
+  - Status: Geïmplementeerd (PR #6)
+  - Afhankelijkheid: data_loader.py, data_analysis.py
+  - Functionaliteit: Tijdreeksvisualisatie, patroonanalyse, energiebalans, opslagpotentieel, outlier analyse
+
 - **navigation.py**: Navigatiestructuur voor de applicatie
   - Status: Nog te implementeren
   - Afhankelijkheid: Geen
@@ -48,7 +54,7 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
   - Afhankelijkheid: Geen
 
 - **visualization.py**: Visualisatiecomponenten voor de data en resultaten
-  - Status: Nog te implementeren
+  - Status: Vervangen door functionaliteit in data_analysis.py
   - Afhankelijkheid: data_analysis.py
 
 ### Utils
@@ -58,6 +64,6 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
 
 ### Hoofdapplicatie
 - **app.py**: Streamlit hoofdapplicatie die alle modules samenbrengt
-  - Status: Basisimplementatie
+  - Status: Basis geïmplementeerd, bijgewerkt voor data_analysis_page
   - Afhankelijkheid: Alle bovenstaande modules
   - Functionaliteit: Navigatie, pagina's renderen, sessiemanagement
