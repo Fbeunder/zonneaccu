@@ -1,0 +1,56 @@
+# Zonneaccu Projectoverzicht
+
+## 1. Projectoverzicht
+Dit project richt zich op het analyseren van zonnepaneel productiedata en het berekenen van potentiële besparingen door overproductie op te slaan. Het doel is verschillende opslagmethoden te evalueren (zoals een warmwaterboiler en accu) om te bepalen welke het meest rendabel en haalbaar is voor gebruik in een woning.
+
+## 2. Architectuur
+Het project is opgezet als een Streamlit webapplicatie met een modulaire structuur:
+
+- **data_processing**: Modules voor het inlezen, verwerken en analyseren van de historische energiedata
+- **storage_modules**: Verschillende implementaties voor energieopslagberekeningen
+- **ui_components**: Herbruikbare UI-componenten voor de Streamlit interface
+- **utils**: Algemene hulpfuncties en configuratiebeheer
+- **app.py**: Hoofdapplicatie die alles samenvoegt
+
+## 3. Modulestatus
+
+### Data Processing
+- **data_loader.py**: Functionaliteit voor het laden en valideren van CSV-data met historische energieproductie en -verbruik
+  - Status: Nog te implementeren
+  - Afhankelijkheid: Geen
+
+- **data_analysis.py**: Analyse van de geladen data (patronen, statistics, etc.) 
+  - Status: Nog te implementeren
+  - Afhankelijkheid: data_loader.py
+
+### Storage Modules
+- **boiler_module.py**: Berekeningen voor warmwaterboiler opslag
+  - Status: Nog te implementeren
+  - Afhankelijkheid: data_loader.py, data_analysis.py
+
+- **battery_module.py**: Berekeningen voor accu opslag
+  - Status: Nog te implementeren
+  - Afhankelijkheid: data_loader.py, data_analysis.py
+
+### UI Components
+- **navigation.py**: Navigatiestructuur voor de applicatie
+  - Status: Nog te implementeren
+  - Afhankelijkheid: Geen
+
+- **input_forms.py**: Herbruikbare invoercomponenten
+  - Status: Nog te implementeren
+  - Afhankelijkheid: Geen
+
+- **visualization.py**: Visualisatiecomponenten voor de data en resultaten
+  - Status: Nog te implementeren
+  - Afhankelijkheid: data_analysis.py
+
+### Utils
+- **config_manager.py**: Beheer van gebruikersconfiguratie en variabelen
+  - Status: Nog te implementeren
+  - Afhankelijkheid: Geen
+
+### Hoofdapplicatie
+- **app.py**: Streamlit hoofdapplicatie die alle modules samenbrengt
+  - Status: Nog te implementeren
+  - Afhankelijkheid: Alle bovenstaande modules
