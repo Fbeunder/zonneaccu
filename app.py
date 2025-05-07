@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 
 # Import packages
 from data_processing import data_loader
+from ui_components import render_data_import_page
 from utils import config_manager
 
 
@@ -22,6 +23,12 @@ def main():
         page_icon="☀️",
         layout="wide",
     )
+    
+    # Initialiseer sessiestate variabelen als ze nog niet bestaan
+    if 'data_loaded' not in st.session_state:
+        st.session_state['data_loaded'] = False
+    if 'energy_data' not in st.session_state:
+        st.session_state['energy_data'] = None
     
     # Toon hoofdtitel
     st.title("Zonneaccu Analyse Tool")
@@ -42,7 +49,13 @@ def main():
         st.subheader("Configuratie")
         # Placeholder voor toekomstige configuratieopties
         
-    # Toon de geselecteerde pagina (placeholder functionaliteit)
+        # Toon data status
+        if st.session_state['data_loaded']:
+            st.success("✅ Data geladen")
+        else:
+            st.warning("❌ Geen data geladen")
+    
+    # Toon de geselecteerde pagina
     if page == "Home":
         st.subheader("Welkom!")
         st.write("""
@@ -50,22 +63,54 @@ def main():
         Navigeer via het menu links naar de verschillende secties.
         """)
         
+        # Toon een korte uitleg over de applicatie
+        st.subheader("Over deze applicatie")
+        st.markdown("""
+        Deze applicatie helpt bij het analyseren van de potentiële besparingen door overproductie 
+        van zonnepanelen op te slaan. U kunt verschillende opslagmethoden evalueren, zoals:
+        
+        - **Warmwaterboiler**: Opslag van energie in de vorm van warm water
+        - **Accu**: Opslag van elektrische energie in een batterij
+        
+        Begin door uw energiedata te uploaden via de 'Data Import' pagina.
+        """)
+        
     elif page == "Data Import":
-        st.subheader("Data Importeren")
-        upload_file = st.file_uploader("Upload CSV met energiedata", type=['csv'])
-        # Placeholder voor toekomstige data import functionaliteit
+        # Gebruik de data import component
+        render_data_import_page()
         
     elif page == "Boiler Analyse":
         st.subheader("Warmwaterboiler Analyse")
+        
+        # Controleer of er data is geladen
+        if not st.session_state.get('data_loaded', False):
+            st.warning("Laad eerst energiedata via de 'Data Import' pagina.")
+            st.stop()
+            
         # Placeholder voor toekomstige boiler analyse
+        st.info("De boiler analyse functionaliteit wordt binnenkort geïmplementeerd.")
         
     elif page == "Accu Analyse":
         st.subheader("Accu Analyse")
+        
+        # Controleer of er data is geladen
+        if not st.session_state.get('data_loaded', False):
+            st.warning("Laad eerst energiedata via de 'Data Import' pagina.")
+            st.stop()
+            
         # Placeholder voor toekomstige accu analyse
+        st.info("De accu analyse functionaliteit wordt binnenkort geïmplementeerd.")
         
     elif page == "Vergelijking":
         st.subheader("Vergelijking Opslagmethoden")
+        
+        # Controleer of er data is geladen
+        if not st.session_state.get('data_loaded', False):
+            st.warning("Laad eerst energiedata via de 'Data Import' pagina.")
+            st.stop()
+            
         # Placeholder voor toekomstige vergelijkingsfunctionaliteit
+        st.info("De vergelijkingsfunctionaliteit wordt binnenkort geïmplementeerd.")
 
 
 if __name__ == "__main__":

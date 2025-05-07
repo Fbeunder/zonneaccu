@@ -1,8 +1,5 @@
-"""Package voor herbruikbare UI-componenten in de Streamlit interface.
+"""UI componenten voor de Zonneaccu applicatie."""
 
-Dit package bevat modules voor:
-- Navigatiestructuur en -componenten
-- Herbruikbare formulieren en invoercomponenten
-- Visualisatiecomponenten voor verschillende soorten data
-- Andere UI-elementen die in meerdere delen van de app gebruikt worden
-"""
+from ui_components.data_import_page import render_data_import_page
+
+__all__ = ['render_data_import_page']
