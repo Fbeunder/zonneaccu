@@ -11,7 +11,8 @@ import matplotlib.pyplot as plt
 
 # Import packages
 from data_processing import data_loader, data_analysis
-from ui_components import data_import_page, data_analysis_page
+from ui_components import data_import_page, data_analysis_page, boiler_analysis_page
+from storage_modules import boiler_module
 from utils import config_manager
 
 
@@ -75,6 +76,7 @@ def main():
         
         Begin door uw energiedata te uploaden via de 'Data Import' pagina.
         Analyseer vervolgens de patronen in uw data via de 'Data Analyse' pagina.
+        Evalueer daarna verschillende opslagmethoden via de 'Boiler Analyse' en 'Accu Analyse' pagina's.
         """)
         
     elif page == "Data Import":
@@ -86,15 +88,8 @@ def main():
         data_analysis_page.render_data_analysis_page()
         
     elif page == "Boiler Analyse":
-        st.subheader("Warmwaterboiler Analyse")
-        
-        # Controleer of er data is geladen
-        if not st.session_state.get('data_loaded', False):
-            st.warning("Laad eerst energiedata via de 'Data Import' pagina.")
-            st.stop()
-            
-        # Placeholder voor toekomstige boiler analyse
-        st.info("De boiler analyse functionaliteit wordt binnenkort geïmplementeerd.")
+        # Gebruik de boiler analyse component
+        boiler_analysis_page.render_boiler_analysis_page()
         
     elif page == "Accu Analyse":
         st.subheader("Accu Analyse")
