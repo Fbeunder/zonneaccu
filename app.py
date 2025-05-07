@@ -8,12 +8,33 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
 # Import packages
 from data_processing import data_loader, data_analysis
-from ui_components import data_import_page, data_analysis_page, boiler_analysis_page, battery_analysis_page
+from ui_components import data_import_page, data_analysis_page, boiler_analysis_page, battery_analysis_page, config_page
 from storage_modules import boiler_module, battery_module
 from utils import config_manager
+
+
+def initialize_session_state():
+    """Initialiseer de sessiestate variabelen als ze nog niet bestaan."""
+    if 'data_loaded' not in st.session_state:
+        st.session_state['data_loaded'] = False
+    if 'energy_data' not in st.session_state:
+        st.session_state['energy_data'] = None
+    if 'current_config' not in st.session_state:
+        # Laad standaard configuratie
+        st.session_state['current_config'] = config_manager.DEFAULT_CONFIG.copy()
+    if 'active_config_profile' not in st.session_state:
+        st.session_state['active_config_profile'] = None
+
+
+def apply_configuration():
+    """Pas de huidige configuratie toe op de sessiestate."""
+    # Hier kunnen we configuratiewaarden toepassen op andere delen van de applicatie
+    # Bijvoorbeeld door ze in de sessiestate te zetten
+    pass
 
 
 def main():
@@ -25,11 +46,8 @@ def main():
         layout="wide",
     )
     
-    # Initialiseer sessiestate variabelen als ze nog niet bestaan
-    if 'data_loaded' not in st.session_state:
-        st.session_state['data_loaded'] = False
-    if 'energy_data' not in st.session_state:
-        st.session_state['energy_data'] = None
+    # Initialiseer sessiestate
+    initialize_session_state()
     
     # Toon hoofdtitel
     st.title("Zonneaccu Analyse Tool")
@@ -45,17 +63,50 @@ def main():
             "Data Analyse",
             "Boiler Analyse",
             "Accu Analyse",
-            "Vergelijking"
+            "Vergelijking",
+            "Configuratie"
         ])
         
-        st.subheader("Configuratie")
-        # Placeholder voor toekomstige configuratieopties
-        
+        st.subheader("Status")
         # Toon data status
         if st.session_state['data_loaded']:
             st.success("✅ Data geladen")
         else:
             st.warning("❌ Geen data geladen")
+        
+        # Toon actieve configuratie
+        active_profile = st.session_state.get('active_config_profile')
+        if active_profile:
+            st.success(f"✅ Configuratie: {active_profile}")
+        else:
+            st.info("ℹ️ Standaard configuratie actief")
+        
+        # Snelle configuratie laden
+        st.subheader("Snelle Configuratie")
+        config_mgr = config_manager.get_config_manager()
+        config_profiles = config_mgr.get_config_list()
+        
+        if config_profiles:
+            selected_profile = st.selectbox(
+                "Laad configuratie:",
+                options=["Standaard"] + config_profiles,
+                index=0
+            )
+            
+            if st.button("Toepassen"):
+                if selected_profile == "Standaard":
+                    st.session_state['current_config'] = config_manager.DEFAULT_CONFIG.copy()
+                    st.session_state['active_config_profile'] = None
+                    st.success("Standaard configuratie geladen!")
+                else:
+                    loaded_config = config_mgr.load_config(selected_profile)
+                    st.session_state['current_config'] = loaded_config
+                    st.session_state['active_config_profile'] = selected_profile
+                    st.success(f"Configuratie '{selected_profile}' geladen!")
+                
+                # Pas de configuratie toe
+                apply_configuration()
+                st.rerun()
     
     # Toon de geselecteerde pagina
     if page == "Home":
@@ -77,6 +128,8 @@ def main():
         Begin door uw energiedata te uploaden via de 'Data Import' pagina.
         Analyseer vervolgens de patronen in uw data via de 'Data Analyse' pagina.
         Evalueer daarna verschillende opslagmethoden via de 'Boiler Analyse' en 'Accu Analyse' pagina's.
+        
+        U kunt uw configuratie-instellingen beheren via de 'Configuratie' pagina.
         """)
         
     elif page == "Data Import":
@@ -94,6 +147,10 @@ def main():
     elif page == "Accu Analyse":
         # Gebruik de accu analyse component
         battery_analysis_page.render_battery_analysis_page()
+        
+    elif page == "Configuratie":
+        # Gebruik de configuratie component
+        config_page.render_config_page()
         
     elif page == "Vergelijking":
         st.subheader("Vergelijking Opslagmethoden")
@@ -204,6 +261,16 @@ def main():
         - Installatiegemak
         - Uw specifieke energiebehoeften
         """)
+        
+        # Voeg een knop toe om de huidige configuratie op te slaan
+        if st.button("Huidige configuratie opslaan"):
+            st.session_state['_redirect_to_config'] = True
+            st.rerun()
+    
+    # Controleer of we moeten doorverwijzen naar de configuratiepagina
+    if st.session_state.get('_redirect_to_config', False):
+        st.session_state['_redirect_to_config'] = False
+        st.switch_page("Configuratie")
 
 
 if __name__ == "__main__":
