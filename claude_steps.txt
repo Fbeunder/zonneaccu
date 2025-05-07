@@ -1,0 +1,56 @@
+# Zonneaccu Project - Volgende Ontwikkelstappen
+
+## Must-haves
+
+1. **Basisprojectstructuur opzetten**
+   - Mappenstructuur aanmaken
+   - .gitignore configureren
+   - Requirements definiëren
+
+2. **Data inleesmodule implementeren (data_loader.py)**
+   - CSV inleesfunctionaliteit
+   - Datavalidatie en -normalisatie
+   - Basisstatistieken genereren
+
+3. **Warmwaterboiler Module (boiler_module.py)**
+   - Berekeningen voor energieopslag in warmwaterboiler
+   - Parameters definiëren (gasprijs, boilervolume, waterverbruik etc.)
+   - Besparingsanalyse implementeren
+
+4. **Accu Module (battery_module.py)**
+   - Berekeningen voor energieopslag in accu
+   - Parameters definiëren (accucapaciteit, efficiëntie, etc.)
+   - Besparingsanalyse implementeren
+
+5. **Streamlit basisinterface**
+   - Navigatiestructuur opzetten
+   - Interfacecomponenten voor gegevensweergave
+   - Formulieren voor invoerparameters
+
+6. **Config en sessiemanagement**
+   - Opslaan en laden van gebruikersvoorkeuren
+   - Sessiemanagement voor meerdere gebruikers
+
+## Nice-to-haves
+
+1. **Geavanceerde data-analyse**
+   - Seizoensgebonden patronen herkennen
+   - Voorspellingsmodellen voor toekomstig verbruik/productie
+
+2. **Uitgebreide visualisaties**
+   - Interactieve grafieken
+   - Vergelijkingsvisualisaties tussen verschillende opslagmethoden
+
+3. **Aanvullende opslagmodules**
+   - Opslag via waterstof
+   - Combinatie van verschillende opslagmethoden
+
+4. **Exportfunctionaliteit**
+   - Rapporten genereren (PDF)
+   - Data exporteren voor verdere analyse
+
+5. **Gebruiksscenario's**
+   - Simulatie van verschillende gebruiksscenario's
+   - "What-if" analyses
+
+De vervolgstappen die noodzakelijk zijn voor de basiswerking van de applicatie zijn alleen de must-haves. De nice-to-haves zijn aanvullende functionaliteiten die de applicatie verder kunnen verbeteren nadat de kernfunctionaliteit is geïmplementeerd.
