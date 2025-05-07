@@ -19,7 +19,7 @@
    - Visualisatiecomponenten voor data-analyse
    - UI-component voor interactieve data analyse
 
-4. **Warmwaterboiler Module (boiler_module.py)**
+4. **Warmwaterboiler Module (boiler_module.py)** [OPEN - Issue #7]
    - Berekeningen voor energieopslag in warmwaterboiler
    - Parameters definiëren (gasprijs, boilervolume, waterverbruik etc.)
    - Besparingsanalyse implementeren
@@ -61,6 +61,6 @@
    - "What-if" analyses
 
 ## Volgende stap
-De volgende stap is het implementeren van de **Warmwaterboiler Module (boiler_module.py)** om berekeningen te kunnen maken voor energieopslag in een warmwaterboiler. Dit is een essentiële component voor de kernfunctionaliteit van de applicatie.
+De volgende stap is het implementeren van de **Warmwaterboiler Module (boiler_module.py)** om berekeningen te kunnen maken voor energieopslag in een warmwaterboiler. Dit is een essentiële component voor de kernfunctionaliteit van de applicatie. Er is al een issue (#7) aangemaakt voor deze taak.
 
 De vervolgstappen die noodzakelijk zijn voor de basiswerking van de applicatie zijn alleen de must-haves. De nice-to-haves zijn aanvullende functionaliteiten die de applicatie verder kunnen verbeteren nadat de kernfunctionaliteit is geïmplementeerd.
