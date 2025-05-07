@@ -27,12 +27,14 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
 
 ### Storage Modules
 - **boiler_module.py**: Berekeningen voor warmwaterboiler opslag
-  - Status: Nog te implementeren
+  - Status: Geïmplementeerd
   - Afhankelijkheid: data_loader.py, data_analysis.py
+  - Functionaliteit: Boilermodel, energieopslagcapaciteit, warmteverliezen, simulatie, financiële analyse
 
 - **battery_module.py**: Berekeningen voor accu opslag
-  - Status: Nog te implementeren
+  - Status: Geïmplementeerd (PR #10)
   - Afhankelijkheid: data_loader.py, data_analysis.py
+  - Functionaliteit: Accumodel, energieopslagcapaciteit, laad/ontlaadverliezen, degradatie, simulatie, financiële analyse
 
 ### UI Components
 - **data_import_page.py**: UI-component voor het importeren en voorbewerken van data
@@ -44,6 +46,16 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
   - Status: Geïmplementeerd
   - Afhankelijkheid: data_loader.py, data_analysis.py
   - Functionaliteit: Tijdreeksvisualisatie, patroonanalyse, energiebalans, opslagpotentieel, outlier analyse
+
+- **boiler_analysis_page.py**: UI-component voor het analyseren van warmwaterboiler opslag
+  - Status: Geïmplementeerd
+  - Afhankelijkheid: data_loader.py, data_analysis.py, boiler_module.py
+  - Functionaliteit: Boilerconfiguratie, simulatie, energiestromen, financiële analyse, optimalisatie
+
+- **battery_analysis_page.py**: UI-component voor het analyseren van accu opslag
+  - Status: Geïmplementeerd (PR #10)
+  - Afhankelijkheid: data_loader.py, data_analysis.py, battery_module.py
+  - Functionaliteit: Accuconfiguratie, simulatie, energiestromen, financiële analyse, optimalisatie
 
 - **navigation.py**: Navigatiestructuur voor de applicatie
   - Status: Nog te implementeren
@@ -64,6 +76,6 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
 
 ### Hoofdapplicatie
 - **app.py**: Streamlit hoofdapplicatie die alle modules samenbrengt
-  - Status: Basis geïmplementeerd, bijgewerkt voor data_analysis_page
+  - Status: Geïmplementeerd, bijgewerkt voor alle analyse pagina's
   - Afhankelijkheid: Alle bovenstaande modules
-  - Functionaliteit: Navigatie, pagina's renderen, sessiemanagement
+  - Functionaliteit: Navigatie, pagina's renderen, sessiemanagement, vergelijking van opslagmethoden
