@@ -1,0 +1,32 @@
+# Zonneaccu Project - Ontwikkelcontext
+
+## Projectbeschrijving
+Dit project is gericht op het ontwikkelen van een applicatie die de overproductie van zonnepanelen analyseert en berekent wat de theoretische opbrengst zou zijn als deze energie zou worden opgeslagen. Het doel is om verschillende opslagoplossingen te evalueren en te bepalen welke het meest haalbaar en rendabel zijn.
+
+## Technische specificaties
+- Streamlit webapplicatie
+- Python-gebaseerd
+- Modulair ontwerp voor verschillende opslagoplossingen
+- Datainvoer via CSV-bestanden
+
+## Dataformaat
+Historische data wordt verwacht in CSV-formaat met de volgende structuur:
+```
+Date/Time,Energy Produced (Wh),Energy Consumed (Wh),Exported to Grid (Wh),Imported from Grid (Wh)
+03/01/2024 00:00,0,81,0,81
+03/01/2024 00:15,0,68,0,68
+03/01/2024 00:30,0,66,0,66
+```
+
+## Kernmodules
+1. **Warmwaterboiler module**: Berekent opslag in warmwaterboiler voor verwarming en warm water
+2. **Accu module**: Berekent opslag in accu voor later gebruik
+
+## User Interface specificaties
+- Gebruiksvriendelijke navigatie
+- Invoervelden voor belangrijke variabelen
+- Persistentie van ingevoerde waarden
+- Duidelijke visualisatie van analyseresultaten
+
+## Vervolgstappen
+De ontwikkeling volgt de stappen zoals beschreven in claude_steps.txt, beginnend met de basisprojectstructuur en vervolgens de implementatie van de kernmodules.
