@@ -10,8 +10,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Import packages
-from data_processing import data_loader
-from ui_components import render_data_import_page
+from data_processing import data_loader, data_analysis
+from ui_components import data_import_page, data_analysis_page
 from utils import config_manager
 
 
@@ -41,6 +41,7 @@ def main():
         page = st.radio("Ga naar:", [
             "Home",
             "Data Import",
+            "Data Analyse",
             "Boiler Analyse",
             "Accu Analyse",
             "Vergelijking"
@@ -73,11 +74,16 @@ def main():
         - **Accu**: Opslag van elektrische energie in een batterij
         
         Begin door uw energiedata te uploaden via de 'Data Import' pagina.
+        Analyseer vervolgens de patronen in uw data via de 'Data Analyse' pagina.
         """)
         
     elif page == "Data Import":
         # Gebruik de data import component
-        render_data_import_page()
+        data_import_page.render_data_import_page()
+        
+    elif page == "Data Analyse":
+        # Gebruik de data analyse component
+        data_analysis_page.render_data_analysis_page()
         
     elif page == "Boiler Analyse":
         st.subheader("Warmwaterboiler Analyse")
