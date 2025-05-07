@@ -15,9 +15,10 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
 ## 3. Modulestatus
 
 ### Data Processing
-- **data_loader.py**: Functionaliteit voor het laden en valideren van CSV-data met historische energieproductie en -verbruik
-  - Status: Nog te implementeren
+- **data_loader.py**: Functionaliteit voor het laden, valideren en voorbewerken van CSV-data met historische energieproductie en -verbruik
+  - Status: Geïmplementeerd
   - Afhankelijkheid: Geen
+  - Functionaliteit: CSV-import, datavalidatie, resampling, afgeleide waarden berekenen, basisstatistieken genereren
 
 - **data_analysis.py**: Analyse van de geladen data (patronen, statistics, etc.) 
   - Status: Nog te implementeren
@@ -33,6 +34,11 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
   - Afhankelijkheid: data_loader.py, data_analysis.py
 
 ### UI Components
+- **data_import_page.py**: UI-component voor het importeren en voorbewerken van data
+  - Status: Geïmplementeerd
+  - Afhankelijkheid: data_loader.py
+  - Functionaliteit: Bestandsupload, voorbeelddata, datavalidatie, preprocessing opties, statistieken weergave
+
 - **navigation.py**: Navigatiestructuur voor de applicatie
   - Status: Nog te implementeren
   - Afhankelijkheid: Geen
@@ -52,5 +58,6 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
 
 ### Hoofdapplicatie
 - **app.py**: Streamlit hoofdapplicatie die alle modules samenbrengt
-  - Status: Nog te implementeren
+  - Status: Basisimplementatie
   - Afhankelijkheid: Alle bovenstaande modules
+  - Functionaliteit: Navigatie, pagina's renderen, sessiemanagement
