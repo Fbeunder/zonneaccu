@@ -32,7 +32,7 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
   - Functionaliteit: Boilermodel, energieopslagcapaciteit, warmteverliezen, simulatie, financiële analyse
 
 - **battery_module.py**: Berekeningen voor accu opslag
-  - Status: Geïmplementeerd (PR #10)
+  - Status: Geïmplementeerd
   - Afhankelijkheid: data_loader.py, data_analysis.py
   - Functionaliteit: Accumodel, energieopslagcapaciteit, laad/ontlaadverliezen, degradatie, simulatie, financiële analyse
 
@@ -53,16 +53,21 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
   - Functionaliteit: Boilerconfiguratie, simulatie, energiestromen, financiële analyse, optimalisatie
 
 - **battery_analysis_page.py**: UI-component voor het analyseren van accu opslag
-  - Status: Geïmplementeerd (PR #10)
+  - Status: Geïmplementeerd
   - Afhankelijkheid: data_loader.py, data_analysis.py, battery_module.py
   - Functionaliteit: Accuconfiguratie, simulatie, energiestromen, financiële analyse, optimalisatie
 
+- **config_page.py**: UI-component voor het beheren van configuraties
+  - Status: Geïmplementeerd (PR #13)
+  - Afhankelijkheid: utils/config_manager.py
+  - Functionaliteit: Configuratieprofielen opslaan/laden, exporteren/importeren, configuratie-editor
+
 - **navigation.py**: Navigatiestructuur voor de applicatie
-  - Status: Nog te implementeren
+  - Status: Geïntegreerd in app.py
   - Afhankelijkheid: Geen
 
 - **input_forms.py**: Herbruikbare invoercomponenten
-  - Status: Nog te implementeren
+  - Status: Geïntegreerd in individuele pagina's
   - Afhankelijkheid: Geen
 
 - **visualization.py**: Visualisatiecomponenten voor de data en resultaten
@@ -71,11 +76,12 @@ Het project is opgezet als een Streamlit webapplicatie met een modulaire structu
 
 ### Utils
 - **config_manager.py**: Beheer van gebruikersconfiguratie en variabelen
-  - Status: Nog te implementeren
+  - Status: Geïmplementeerd (PR #13)
   - Afhankelijkheid: Geen
+  - Functionaliteit: Configuratieprofielen opslaan/laden, validatie, import/export, standaardwaarden
 
 ### Hoofdapplicatie
 - **app.py**: Streamlit hoofdapplicatie die alle modules samenbrengt
-  - Status: Geïmplementeerd, bijgewerkt voor alle analyse pagina's
+  - Status: Geïmplementeerd, bijgewerkt voor alle analyse pagina's en configuratiebeheer
   - Afhankelijkheid: Alle bovenstaande modules
-  - Functionaliteit: Navigatie, pagina's renderen, sessiemanagement, vergelijking van opslagmethoden
+  - Functionaliteit: Navigatie, pagina's renderen, sessiemanagement, vergelijking van opslagmethoden, configuratiebeheer
