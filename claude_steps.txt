@@ -7,27 +7,33 @@
    - .gitignore configureren
    - Requirements definiëren
 
-2. **Data inleesmodule implementeren (data_loader.py)** [IN BEHANDELING - Issue #3]
+2. **Data inleesmodule implementeren (data_loader.py)** [AFGEROND - PR #4]
    - CSV inleesfunctionaliteit
    - Datavalidatie en -normalisatie
    - Basisstatistieken genereren
+   - UI-component voor data import
 
-3. **Warmwaterboiler Module (boiler_module.py)**
+3. **Data analyse module implementeren (data_analysis.py)**
+   - Geavanceerde data-analyse functies
+   - Patronen herkennen in energieproductie en -verbruik
+   - Visualisatiecomponenten voor data-analyse
+
+4. **Warmwaterboiler Module (boiler_module.py)**
    - Berekeningen voor energieopslag in warmwaterboiler
    - Parameters definiëren (gasprijs, boilervolume, waterverbruik etc.)
    - Besparingsanalyse implementeren
 
-4. **Accu Module (battery_module.py)**
+5. **Accu Module (battery_module.py)**
    - Berekeningen voor energieopslag in accu
    - Parameters definiëren (accucapaciteit, efficiëntie, etc.)
    - Besparingsanalyse implementeren
 
-5. **Streamlit basisinterface**
-   - Navigatiestructuur opzetten
-   - Interfacecomponenten voor gegevensweergave
-   - Formulieren voor invoerparameters
+6. **Vergelijkingsmodule**
+   - Vergelijking tussen verschillende opslagmethoden
+   - Kosten-batenanalyse
+   - Terugverdientijdberekeningen
 
-6. **Config en sessiemanagement**
+7. **Config en sessiemanagement**
    - Opslaan en laden van gebruikersvoorkeuren
    - Sessiemanagement voor meerdere gebruikers
 
