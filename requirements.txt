@@ -1,15 +1,15 @@
-# Core dependencies
-streamlit>=1.25.0
-pandas>=2.0.0
-numpy>=1.24.0
+# Basis packages
+streamlit>=1.20.0
+pandas>=1.5.0
+numpy>=1.22.0
+matplotlib>=3.5.0
 
-# Visualization
-matplotlib>=3.7.0
-plotly>=5.15.0
+# Data visualisatie
+plotly>=5.10.0
+altair>=4.2.0
 
-# Date handling
-python-dateutil>=2.8.2
+# Data analyse
+scipy>=1.9.0
 
-# Utility
-tqdm>=4.65.0
-pyyaml>=6.0.0
+# Utilities
+python-dotenv>=0.20.0
