@@ -13,10 +13,11 @@
    - Basisstatistieken genereren
    - UI-component voor data import
 
-3. **Data analyse module implementeren (data_analysis.py)**
+3. **Data analyse module implementeren (data_analysis.py)** [AFGEROND - PR #6]
    - Geavanceerde data-analyse functies
    - Patronen herkennen in energieproductie en -verbruik
    - Visualisatiecomponenten voor data-analyse
+   - UI-component voor interactieve data analyse
 
 4. **Warmwaterboiler Module (boiler_module.py)**
    - Berekeningen voor energieopslag in warmwaterboiler
@@ -40,11 +41,11 @@
 ## Nice-to-haves
 
 1. **Geavanceerde data-analyse**
-   - Seizoensgebonden patronen herkennen
    - Voorspellingsmodellen voor toekomstig verbruik/productie
+   - Machine learning voor patroonherkenning
 
 2. **Uitgebreide visualisaties**
-   - Interactieve grafieken
+   - Meer interactieve grafieken
    - Vergelijkingsvisualisaties tussen verschillende opslagmethoden
 
 3. **Aanvullende opslagmodules**
@@ -58,5 +59,8 @@
 5. **Gebruiksscenario's**
    - Simulatie van verschillende gebruiksscenario's
    - "What-if" analyses
+
+## Volgende stap
+De volgende stap is het implementeren van de **Warmwaterboiler Module (boiler_module.py)** om berekeningen te kunnen maken voor energieopslag in een warmwaterboiler. Dit is een essentiële component voor de kernfunctionaliteit van de applicatie.
 
 De vervolgstappen die noodzakelijk zijn voor de basiswerking van de applicatie zijn alleen de must-haves. De nice-to-haves zijn aanvullende functionaliteiten die de applicatie verder kunnen verbeteren nadat de kernfunctionaliteit is geïmplementeerd.
