@@ -31,14 +31,15 @@
    - Besparingsanalyse implementeren
    - UI-component voor accu analyse
 
-6. **Vergelijkingsmodule** [OPEN]
+6. **Config en sessiemanagement** [IN PROGRESS - PR #13]
+   - Opslaan en laden van gebruikersvoorkeuren
+   - Sessiemanagement voor meerdere gebruikers
+   - Configuratiepagina voor het beheren van instellingen
+
+7. **Vergelijkingsmodule** [OPEN]
    - Vergelijking tussen verschillende opslagmethoden
    - Kosten-batenanalyse
    - Terugverdientijdberekeningen
-
-7. **Config en sessiemanagement** [OPEN]
-   - Opslaan en laden van gebruikersvoorkeuren
-   - Sessiemanagement voor meerdere gebruikers
 
 ## Nice-to-haves
 
@@ -46,7 +47,7 @@
    - Voorspellingsmodellen voor toekomstig verbruik/productie
    - Machine learning voor patroonherkenning
 
-2. **Uitgebreide visualisaties**
+2. **Uitgebreide visualisaties** [OPEN - Issue #11]
    - Meer interactieve grafieken
    - Vergelijkingsvisualisaties tussen verschillende opslagmethoden
 
@@ -63,13 +64,14 @@
    - "What-if" analyses
 
 ## Volgende stap
-De volgende stap is het verbeteren van de **Vergelijkingsmodule** in app.py. Hoewel er al een eenvoudige vergelijking is geïmplementeerd tussen de boiler en accu modules, kan deze verder worden uitgebreid met meer gedetailleerde vergelijkingen, zoals:
+De volgende stap is het afronden van de **Config en sessiemanagement** module (PR #13). Zodra deze is geïmplementeerd, kan de **Vergelijkingsmodule** worden verbeterd om een meer gedetailleerde vergelijking te maken tussen verschillende opslagmethoden, zoals beschreven in issue #11.
 
+De vergelijkingsmodule kan worden uitgebreid met:
 1. Vergelijking van verschillende capaciteiten en configuraties
 2. Gecombineerde opslagscenario's (boiler + accu)
 3. Gevoeligheidsanalyse voor verschillende energieprijzen
 4. Uitgebreidere visualisaties voor vergelijking
 
-Daarnaast kan de **Config en sessiemanagement** module worden geïmplementeerd om gebruikersvoorkeuren op te slaan en te laden, zodat gebruikers niet elke keer alle parameters opnieuw hoeven in te stellen.
+Na het afronden van de vergelijkingsmodule zou de applicatie klaar zijn voor een eerste release, aangezien alle kernfunctionaliteit dan is geïmplementeerd.
 
-De vervolgstappen die noodzakelijk zijn voor de basiswerking van de applicatie zijn alleen de must-haves. De nice-to-haves zijn aanvullende functionaliteiten die de applicatie verder kunnen verbeteren nadat de kernfunctionaliteit is geïmplementeerd. De kernfunctionaliteit van de applicatie is nu grotendeels geïmplementeerd, met de belangrijkste opslagmodules (boiler en accu) volledig functioneel. De resterende must-haves (vergelijkingsmodule en config management) zijn verbeteringen die de gebruikerservaring verbeteren, maar de applicatie is al bruikbaar in zijn huidige vorm.
+De vervolgstappen die noodzakelijk zijn voor de basiswerking van de applicatie zijn alleen de must-haves. De nice-to-haves zijn aanvullende functionaliteiten die de applicatie verder kunnen verbeteren nadat de kernfunctionaliteit is geïmplementeerd. De kernfunctionaliteit van de applicatie is nu grotendeels geïmplementeerd, met de belangrijkste opslagmodules (boiler en accu) volledig functioneel. De resterende must-have (vergelijkingsmodule) is een verbetering die de gebruikerservaring verrijkt, maar de applicatie is al bruikbaar in zijn huidige vorm.
