@@ -2,12 +2,12 @@
 
 ## Must-haves
 
-1. **Basisprojectstructuur opzetten**
+1. **Basisprojectstructuur opzetten** [AFGEROND - PR #2]
    - Mappenstructuur aanmaken
    - .gitignore configureren
    - Requirements definiëren
 
-2. **Data inleesmodule implementeren (data_loader.py)**
+2. **Data inleesmodule implementeren (data_loader.py)** [IN BEHANDELING - Issue #3]
    - CSV inleesfunctionaliteit
    - Datavalidatie en -normalisatie
    - Basisstatistieken genereren
