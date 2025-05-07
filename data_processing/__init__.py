@@ -6,3 +6,7 @@ Dit package bevat modules voor:
 - Het uitvoeren van analyses op de data
 - Het voorbereiden van data voor visualisatie en berekeningen
 """
+
+from data_processing import data_loader, data_analysis
+
+__all__ = ['data_loader', 'data_analysis']
