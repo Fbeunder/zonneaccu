@@ -19,24 +19,24 @@
    - Visualisatiecomponenten voor data-analyse
    - UI-component voor interactieve data analyse
 
-4. **Warmwaterboiler Module (boiler_module.py)** [OPEN - PR #8]
+4. **Warmwaterboiler Module (boiler_module.py)** [AFGEROND - PR #8]
    - Berekeningen voor energieopslag in warmwaterboiler
    - Parameters definiëren (gasprijs, boilervolume, waterverbruik etc.)
    - Besparingsanalyse implementeren
    - UI-component voor boiler analyse
 
-5. **Accu Module (battery_module.py)** [OPEN - Issue #9]
+5. **Accu Module (battery_module.py)** [AFGEROND - PR #10]
    - Berekeningen voor energieopslag in accu
    - Parameters definiëren (accucapaciteit, efficiëntie, etc.)
    - Besparingsanalyse implementeren
    - UI-component voor accu analyse
 
-6. **Vergelijkingsmodule**
+6. **Vergelijkingsmodule** [OPEN]
    - Vergelijking tussen verschillende opslagmethoden
    - Kosten-batenanalyse
    - Terugverdientijdberekeningen
 
-7. **Config en sessiemanagement**
+7. **Config en sessiemanagement** [OPEN]
    - Opslaan en laden van gebruikersvoorkeuren
    - Sessiemanagement voor meerdere gebruikers
 
@@ -63,6 +63,13 @@
    - "What-if" analyses
 
 ## Volgende stap
-De volgende stap is het implementeren van de **Accu Module (battery_module.py)** om berekeningen te kunnen maken voor energieopslag in een accu en het analyseren van de potentiële besparingen. Dit is een essentiële component voor de kernfunctionaliteit van de applicatie. Er is al een issue (#9) aangemaakt voor deze taak, maar deze kan pas worden opgepakt nadat PR #8 voor de warmwaterboiler module is gemerged.
+De volgende stap is het verbeteren van de **Vergelijkingsmodule** in app.py. Hoewel er al een eenvoudige vergelijking is geïmplementeerd tussen de boiler en accu modules, kan deze verder worden uitgebreid met meer gedetailleerde vergelijkingen, zoals:
 
-De vervolgstappen die noodzakelijk zijn voor de basiswerking van de applicatie zijn alleen de must-haves. De nice-to-haves zijn aanvullende functionaliteiten die de applicatie verder kunnen verbeteren nadat de kernfunctionaliteit is geïmplementeerd.
+1. Vergelijking van verschillende capaciteiten en configuraties
+2. Gecombineerde opslagscenario's (boiler + accu)
+3. Gevoeligheidsanalyse voor verschillende energieprijzen
+4. Uitgebreidere visualisaties voor vergelijking
+
+Daarnaast kan de **Config en sessiemanagement** module worden geïmplementeerd om gebruikersvoorkeuren op te slaan en te laden, zodat gebruikers niet elke keer alle parameters opnieuw hoeven in te stellen.
+
+De vervolgstappen die noodzakelijk zijn voor de basiswerking van de applicatie zijn alleen de must-haves. De nice-to-haves zijn aanvullende functionaliteiten die de applicatie verder kunnen verbeteren nadat de kernfunctionaliteit is geïmplementeerd. De kernfunctionaliteit van de applicatie is nu grotendeels geïmplementeerd, met de belangrijkste opslagmodules (boiler en accu) volledig functioneel. De resterende must-haves (vergelijkingsmodule en config management) zijn verbeteringen die de gebruikerservaring verbeteren, maar de applicatie is al bruikbaar in zijn huidige vorm.
