@@ -36,7 +36,7 @@
    - Sessiemanagement voor meerdere gebruikers
    - Configuratiepagina voor het beheren van instellingen
 
-7. **Vergelijkingsmodule** [OPEN]
+7. **Vergelijkingsmodule** [OPEN - Issue #14]
    - Vergelijking tussen verschillende opslagmethoden
    - Kosten-batenanalyse
    - Terugverdientijdberekeningen
@@ -64,13 +64,13 @@
    - "What-if" analyses
 
 ## Volgende stap
-De volgende stap is het afronden van de **Config en sessiemanagement** module (PR #13). Zodra deze is geïmplementeerd, kan de **Vergelijkingsmodule** worden verbeterd om een meer gedetailleerde vergelijking te maken tussen verschillende opslagmethoden, zoals beschreven in issue #11.
+De volgende stap is het afronden van de **Config en sessiemanagement** module (PR #13) en het implementeren van de **Vergelijkingsmodule** (Issue #14). Deze vergelijkingsmodule zal een gedetailleerde vergelijking maken tussen verschillende opslagmethoden, inclusief kosten-batenanalyse en terugverdientijdberekeningen.
 
-De vergelijkingsmodule kan worden uitgebreid met:
-1. Vergelijking van verschillende capaciteiten en configuraties
-2. Gecombineerde opslagscenario's (boiler + accu)
-3. Gevoeligheidsanalyse voor verschillende energieprijzen
-4. Uitgebreidere visualisaties voor vergelijking
+De vergelijkingsmodule zal worden geïmplementeerd met:
+1. Een nieuwe module `comparison_module.py` voor de vergelijkingslogica
+2. Een nieuwe UI-component `comparison_page.py` voor de gebruikersinterface
+3. Visualisatiefuncties voor het vergelijken van opslagmethoden
+4. Integratie in de hoofdapplicatie
 
 Na het afronden van de vergelijkingsmodule zou de applicatie klaar zijn voor een eerste release, aangezien alle kernfunctionaliteit dan is geïmplementeerd.
 
